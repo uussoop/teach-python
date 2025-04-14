@@ -1,0 +1,3 @@
+sqlmodel>=0.0.8
+typer>=0.9.0
+rich>=13.4.2 
