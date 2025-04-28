@@ -9,6 +9,13 @@ A simple command-line inventory management system built with Python, SQLModel, a
 - Store data in SQLite database using SQLModel ORM
 - User-friendly command-line interface
 
+## Features (Session 2)
+
+- Search functionality for products by name, description, or category
+- Low stock alerts with customizable thresholds
+- Sales tracking and history
+- Improved data models with relationships
+
 ## Prerequisites
 
 - Python 3.7+
@@ -54,6 +61,7 @@ You will be prompted to enter:
 - Price
 - Stock quantity
 - Category
+- Low stock threshold (Session 2)
 
 ### Edit a Product
 
@@ -83,21 +91,59 @@ Display all products in the inventory:
 python main.py list
 ```
 
+### Search Products (Session 2)
+
+Search for products by name, description, or category:
+
+```bash
+python main.py search
+```
+
+You will be prompted to enter a search term.
+
+### Low Stock Alerts (Session 2)
+
+Check for products with stock below their threshold:
+
+```bash
+python main.py low-stock
+```
+
+### Record a Sale (Session 2)
+
+Record a sale of a product:
+
+```bash
+python main.py sell
+```
+
+You will be prompted to enter:
+- Product ID
+- Quantity sold
+- Sale price (optional)
+
+### View Sales History (Session 2)
+
+View the history of all sales, optionally filtered by product:
+
+```bash
+python main.py sales
+```
+
 ## Project Structure
 
 ```
 inventory_management_system/
 ├── main.py           # CLI entry point with Typer
-├── models.py         # Product data model
+├── models.py         # Product and Sale data models
 ├── database.py       # Database connection and initialization
-├── operations.py     # CRUD operations for products
+├── operations.py     # CRUD operations for products and sales
 └── inventory.db      # SQLite database file (created on init)
 ```
 
-## Future Enhancements (Coming in Sessions 2 & 3)
+## Future Enhancements (Coming in Session 3)
 
-- Search functionality
-- Low stock alerts
-- Sales tracking
 - Reporting features
-- More advanced data models 
+- Data visualization
+- User authentication and authorization
+- Export/import functionality 
